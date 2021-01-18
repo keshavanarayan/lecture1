@@ -1,0 +1,91 @@
+<!-- see also https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started -->
+
+<!DOCTYPE html> 
+<html>
+
+    <!-- everything that isn't content -->
+    <head>
+        <meta charset="utf-8">
+        <title>Example 1</title>
+
+        <!-- css -->
+        <style>
+            /* uncomment to change default font */
+            html {
+                font-family: sans-serif;
+            } 
+
+            img {
+                width: 512px; /* set image width */
+            }
+
+            #caption {
+                display: none; /* start with caption hidden */
+                font-style: italic;
+            }
+        </style>
+    </head>
+
+    <!-- content -->
+    <body>
+        <!-- some text and links -->
+        <p>
+            <a href="http://www.iaacblog.com/wp-content/uploads/2020/12/g_1_poster-730x411.jpg">Modular Edifice : A Project Of IAAC</a>, <a href="http://www.iaacblog.com/programs/modular-edifice-truncated-octahedron/"></a>, in Institute for Advanced Architecture of Catalonia developed at Master in Advanced Computation for Architecture & Design in 2020/21 by: Aleksander Mastalski,  Keshava Narayan, and Krishnanunni Vijayakumar, via IAAC Blog
+        </p>
+        
+        <!-- an image -->
+        <img id="myImage"
+             alt="Render 1"
+             src="http://www.iaacblog.com/wp-content/uploads/2020/12/g_1_poster-730x411.jpg">
+
+        
+        <img id="myImage2"
+             alt="Render 2"
+             src="http://www.iaacblog.com/wp-content/uploads/2020/12/screenshot-2020-12-19-150703-730x438.png">
+
+        <!-- a caption --> 
+        <p id="caption1">
+            The objective of the project is to use modular thinking as a way of sustainable building by developing a modular building almost entirely in timber and upcycling existing materials as a carbon-reducing and sustainable approach.
+        </p>
+
+        <p id="caption2">
+            The site is located in Mumbai, India. It is located on the eastern coast of Mumbai in between two main roads and a rail track. The site is very accessible by road and rail and the nearest railway station is about 5 min walk from the site. The site lies in between the commercial and the industrial parts of the city.
+        </p>
+
+        <!-- javascript -->
+        <script type="application/javascript">
+            // get reference to html elements
+            const img = document.getElementById('myImage')
+            const img2 = document.getElementById('myImage2')
+
+            // listen to events related to the image
+            img.addEventListener('click', mouseO, false)
+            img.addEventListener('click', mouseA, false)
+
+            // define what happens when there is a mouse over event
+            function mouseO() {
+                document.getElementById('caption').style.display = 'block';
+            }
+
+            // define what happens when there is a mouse out event
+            function mouseA() {
+                document.getElementById('caption').style.display = 'none';
+            }
+
+            img2.addEventListener('mouseover', mouseOver, false)
+            img2.addEventListener('mouseout', mouseOut, false)
+
+            // define what happens when there is a mouse over event
+            function mouseOver() {
+                document.getElementById('caption2').style.display = 'block';
+            }
+
+            // define what happens when there is a mouse out event
+            function mouseOut() {
+                document.getElementById('caption2').style.display = 'none';
+            }
+        </script>
+
+        <!-- the end -->
+    </body>
+</html>
