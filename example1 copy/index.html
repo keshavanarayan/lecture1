@@ -59,16 +59,16 @@
             const img2 = document.getElementById('myImage2')
 
             // listen to events related to the image
-            img.addEventListener('click', mouseO, false)
-            img.addEventListener('click', mouseA, false)
+            img.addEventListener('click', mouseOver_, false)
+            img.addEventListener('click', mouseOut_, false)
 
             // define what happens when there is a mouse over event
-            function mouseO() {
+            function mouseOver_() {
                 document.getElementById('caption').style.display = 'block';
             }
 
             // define what happens when there is a mouse out event
-            function mouseA() {
+            function mouseOut_() {
                 document.getElementById('caption').style.display = 'none';
             }
 
