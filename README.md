@@ -1,4 +1,4 @@
-# lecture1
+# Basic JavaScript
 
 Examples for Lecture 1
 
